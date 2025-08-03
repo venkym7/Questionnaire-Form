@@ -1,12 +1,12 @@
 # 📝 Questionnaire Form - Vite + React + Tailwind CSS
 
-A responsive and validated user data collection form built using **Vite**, **React**, and **Tailwind CSS**. This form captures personal details, validates input based on country code, and displays a preview after submission.
+A responsive and user-friendly questionnaire form built using **Vite**, **React**, and **Tailwind CSS**. The form includes fields like Full Name, Date of Birth, Age, Location, and Mobile Number with real-time validation and dynamic country-based rules.
 
 ---
 
 ## 🚀 Live Demo
 
-🌐 Netlify: [https://questionnaire-forms.netlify.app](https://questionnaire-forms.netlify.app)
+🔗 **Netlify URL:** [https://questionnaire-forms.netlify.app](https://questionnaire-forms.netlify.app)
 
 ---
 
@@ -15,33 +15,42 @@ A responsive and validated user data collection form built using **Vite**, **Rea
 - ⚛️ React (with Hooks)
 - ⚡ Vite
 - 🎨 Tailwind CSS
-- 📄 Country Data (Local JSON-like file)
+- 🌍 Country Data (Static JSON)
+- ✅ Custom Validation Logic
 
 ---
 
 ## ✨ Features
 
-- 📥 Input fields for:
+- 📌 Input Fields:
   - Full Name
-  - Date of Birth (DD-MM-YYYY)
-  - Age (auto-compared with DOB)
-  - Location (country selector with code)
-  - Mobile Number (validation based on country code)
-- 📆 Age is auto-validated from DOB
-- 📱 Mobile number length changes based on selected country (+91 → 12 digits, others → 13 digits)
-- 🛡️ Real-time validation with error messages
-- 📋 Displays submitted form data in a preview section after submission
-- 🌈 Responsive, modern design using Tailwind CSS
+  - Date of Birth (DD-MM-YYYY format)
+  - Age
+  - Location (Country dropdown)
+  - Mobile Number (with country code validation)
+
+- 🔍 Validations:
+  - Age must match the DOB
+  - Mobile number must be valid according to selected country's code
+  - All fields are required
+
+- 📱 Responsive UI:
+  - Works seamlessly on both desktop and mobile devices
+
+- 📦 Clean and maintainable code with React best practices
+
+- 🧠 Form summary shown after successful submission
 
 ---
 
-## 🧠 Validation Logic
+## 🧮 Validation Logic
 
-- **DOB Format Check:** Must match `DD-MM-YYYY`
-- **Age Check:** Must match age calculated from DOB
-- **Country Code Check:** Country selection determines expected mobile length
-- **Mobile Validation:** Accepts only digits with country-specific length
-- **Form Submission:** Blocked unless all validations pass
+- **DOB Format:** Must be in `DD-MM-YYYY`
+- **Age Match:** Validated against DOB using `calculateAgeFromDOB()`
+- **Mobile Number:**
+  - Must be numeric
+  - 12 digits for India (`+91`)
+  - 13 digits for other countries
 
 ---
 
@@ -49,29 +58,38 @@ A responsive and validated user data collection form built using **Vite**, **Rea
 ---
 
 ## 📸 Screenshots
-
 ### ✅ Questionnaire Form
 
-*(Add screenshot here)*
+>![Questionnaire Form](./src/assets/Screenshot%202025-08-03%20195315.png)
 
 ### 📋 Form Submission Preview
 
-*(Add screenshot here)*
+![Form Submission Preview](./src/assets/Screenshot%202025-08-03%20200345.png)
+
 
 ---
-##  Clone the repository
+
+## 🧪 Getting Started Locally
+
+To run this project on your local machine:
+
+```bash
+# Clone the repository
 git clone https://github.com/your-username/questionnaire-form.git
+
+# Move into the project folder
 cd questionnaire-form
 
-## Install dependencies
+# Install dependencies
 npm install
 
-## Start the development server
+# Start the development server
 npm run dev
 
-##📬 Contact
-VENKATESH MALLADI
+📬 Contact
+Malladi Venkatesh
 📞 Phone: 7799472047
 📧 Email: venkym7799@gmail.com
 💼 LinkedIn: linkedin.com/in/venkatesh-malladi-7b0a16343
 💻 GitHub: github.com/venkym7
+
